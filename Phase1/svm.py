@@ -46,7 +46,6 @@ def train_SVM(X, Y, W, margin, lr, lmda=0.01,
 
         Wnew = W - lr * (SumLw + lmda * W)
 
-        # ✅ stopping condition
         if np.linalg.norm(Wnew - W) < tol:
             break
 
